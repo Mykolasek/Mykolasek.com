@@ -3,18 +3,163 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Strona Chrome</title>
+    <title>Neon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            height: 100vh;
+            background-color: black;
+            display:flex;
+        }
+        
+        div {
+            left: 5%;
+            top: 5%;
+            position: absolute;
+             border: green solid 50px;
+            background-color: green;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: flex;
+        }
+        
+        button {
+            position:absolute;
+            left: 5.98%;
+            top: 9.2%;
+            background-color:brown;
+            text-decoration: none;
+            text-shadow: 0 0 30px white;
+            border: 3px solid black;
+            text-align: center;
+            border-radius: 20%
+        }
+        
+        ul{
+            margin:auto;
+        }
+        
+        li {
+            font-size: 40px;
+            color: greenyellow;
+            display: inline-block;
+            font-family:monospace;
+            font-weight: bold;
+            letter-spacing: 4px;
+            text-shadow: 0 0 30px white, 0 0 10px green;
+            transition: opacity 0.2s;
+        }
+        
+        li:nth-child(3) {
+            transform: rotate(15deg) translateY(4px);
+            animation: neon 4s infinite;
+        }
+        
+        
+        
+        @keyframes neon {
+            0% {
+                opacity: 0;
+            }
+            
+      5% {
+        opacity: 1;
+      }
+      20% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 0.5;
+      }
+      30% {
+        opacity: 0.5
+      }
+      32% {
+        opacity: 1;
+      }
+      45% {
+        opacity: 1;
+      }
+      46% {
+        opacity: 0.5;
+      }
+      54% {
+        opacity: 0.5;
+      }
+      55% {
+        opacity: 1;
+      }
+      77% {
+        opacity: 1;
+      }
+      78% {
+        opacity: 0;
+      }
+      88% {
+        opacity: 0;
+      }
+      90% {
+        opacity: 1
+      }
+      93% {
+        opacity: 1
+      }
+      95% {
+        opacity: 0
+      }
+      97% {
+        opacity: 0
+      }
+      98% {
+        opacity: 1
+      }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+    .off {
+            opacity:0;
+        }
+        
+    </style>
 </head>
 
 <body>
-    <div>
-        <header>
-            <h1>Praca z <i>"chat GPT"</i></h1>
-        </header>
-        <section>
-            <p>Strona, którą można wyszukać w każdej przeglądarce na każdym urządzeniu</p>
-        </section>
-    </div>
+    <div></div>
+    <button>WYŁĄZC</button>
+     <ul>
+        <li>W</li>
+        <li>E</li>
+        <li>B</li>
+        <li>S</li>
+        <li>A</li>
+        <li>M</li>
+        <li>U</li>
+        <li>R</li>
+        <li>A</li>
+        <li>J</li>
+        <li>.</li>
+        <li>P</li>
+        <li>L</li>
+    </ul>
+    <script>
+  var button = document.querySelector("button");
+    button.addEventListener("click", function() {
+      if (this.textContent == "WŁĄCZ") {
+        this.textContent = "WYŁĄCZ";
+      } else {
+        this.textContent = "WŁĄCZ";
+      }
+      const letters = document.querySelectorAll("li");
+      for (var i = 0; letters.length > i; i++) {
+        letters[i].classList.toggle("off");
+      }
+    })
+        </script>
 </body>
 </html>
